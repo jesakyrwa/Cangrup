@@ -3,32 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankara Yol Çizgi | Profesyonel Çözümler</title>
+    <title>Bozüyük Yol Çizgi | Bilecik Profesyonel Zemin İşaretleme</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #FFD700; /* Canlı Sarı */
-            --bg-dark: #1a1c1e; /* Koyu Gri/Siyah Arkaplan */
-            --card-bg: #2d2f31; /* Kart Arkaplanı */
+            --primary: #FFD700;
+            --bg-dark: #1a1c1e;
+            --card-bg: #2d2f31;
             --text-light: #e0e0e0;
             --white: #ffffff;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg-dark); color: var(--text-light); }
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-        }
-
-        /* Header & Nav */
+        /* Header */
         header {
-            background-color: rgba(26, 28, 30, 0.95);
+            background-color: rgba(26, 28, 30, 0.98);
             padding: 15px 8%;
             display: flex;
             justify-content: space-between;
@@ -39,247 +30,122 @@
             z-index: 1000;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 800;
-            font-size: 1.4rem;
-            color: var(--white);
-        }
-
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--white); text-decoration: none; }
         .logo span { color: var(--primary); }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--white);
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: var(--white); font-size: 0.9rem; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
 
-        .btn-header {
-            background: var(--primary);
-            color: #000;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.85rem;
-        }
+        .btn-header { background: var(--primary); color: #000; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&q=80&w=1600');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 10%;
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1596395819057-e37f55a8516d?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-bottom: 30px;
-        }
+        .hero h1 { font-size: 3rem; color: var(--white); margin-bottom: 15px; }
 
         /* Info Bar */
         .info-bar {
-            background: var(--primary);
-            color: #000;
-            padding: 15px;
-            text-align: center;
-            font-weight: 800;
-            font-size: 1.1rem;
-            margin-top: -30px;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 10;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: var(--primary); color: #000; padding: 20px; text-align: center;
+            font-weight: 800; width: 80%; margin: -40px auto 40px; position: relative; z-index: 10;
         }
 
-        /* Services Grid */
-        .section-title {
-            text-align: center;
-            margin: 60px 0 40px;
-            font-size: 2.5rem;
-        }
-
-        .services-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 0 8% 60px;
-        }
-
-        .service-card {
+        /* Content Sections */
+        section { padding: 80px 8%; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2.2rem; color: var(--primary); }
+        
+        .content-box {
             background: var(--card-bg);
-            padding: 40px;
-            text-align: center;
-            border-bottom: 5px solid var(--primary);
-            transition: 0.4s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            background: #383a3d;
-        }
-
-        .service-card i {
-            font-size: 3.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            margin-bottom: 15px;
-            color: var(--white);
-        }
-
-        /* Logo Bar (Brands) */
-        .brand-bar {
-            background: var(--white);
-            padding: 30px 8%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            filter: grayscale(1);
-            opacity: 0.7;
-        }
-
-        /* Footer */
-        footer {
-            background: #111;
-            padding: 60px 8% 20px;
-            border-top: 1px solid #333;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
+            padding: 30px;
+            border-radius: 10px;
+            line-height: 1.8;
             margin-bottom: 40px;
         }
 
-        .footer-col h4 {
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
+        /* Grid System */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: #222426; padding: 30px; border-left: 5px solid var(--primary); }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
 
-        .footer-col p, .footer-col li {
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            color: #bbb;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            header { flex-direction: column; gap: 20px; }
-            .hero h1 { font-size: 2rem; }
-        }
+        footer { background: #111; padding: 40px 8%; text-align: center; border-top: 1px solid #333; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">
-            <i class="fas fa-DrawPolygon"></i> ANKARA <span>YOL ÇİZGİ</span>
-        </div>
+        <a href="#" class="logo">BOZÜYÜK <span>YOL ÇİZGİ</span></a>
         <nav>
             <ul>
-                <li><a href="#">Anasayfa</a></li>
-                <li><a href="#">Hizmetlerimiz</a></li>
-                <li><a href="#">Uygulama Alanları</a></li>
-                <li><a href="#">Referanslar</a></li>
-                <li><a href="#">İletişim</a></li>
+                <li><a href="#hizmetler">Hizmetler</a></li>
+                <li><a href="#uygulama">Uygulama Alanları</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
             </ul>
         </nav>
-        <a href="tel:03120000000" class="btn-header"><i class="fas fa-phone"></i> TEKLİF AL</a>
+        <a href="tel:05000000000" class="btn-header">TEKLİF AL</a>
     </header>
 
     <section class="hero">
-        <h1>GÜVENLİ YOLLAR,<br>KESİNTİSİZ TRAFİK</h1>
-        <p>Ankara'nın öncü yol çizgi firması olarak; otopark, fabrika ve karayolu projelerinizde profesyonel ve kalıcı çözümler sunuyoruz.</p>
+        <h1>BİLECİK'İN GÜVENLİ YOLLARI</h1>
+        <p>Bozüyük merkezli, profesyonel zemin ve yol işaretleme çözümleri.</p>
     </section>
 
     <div class="info-bar">
-        ÜCRETSİZ KEŞİF & DANIŞMANLIK HATTI: 0 (312) XXX XX XX
+        BOZÜYÜK & BİLECİK GENELİ ÜCRETSİZ KEŞİF: 0 (5XX) XXX XX XX
     </div>
 
-    <h2 class="section-title">Hizmetlerimiz</h2>
-    <section class="services-container">
-        <div class="service-card">
-            <i class="fas fa-road"></i>
-            <h3>Yol Çizgi Sistemleri</h3>
-            <p>Karayolları standartlarına uygun, yüksek dayanımlı termoplastik uygulama.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-parking"></i>
-            <h3>Otopark Çizgileri</h3>
-            <p>AVM ve konut projeleri için kolon boyama, numara ve yönlendirme çalışmaları.</p>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-industry"></i>
-            <h3>Fabrika & Depo İşaretleme</h3>
-            <p>İş güvenliği standartlarına uygun yürüme yolları ve saha çizgileri.</p>
+    <section id="hizmetler">
+        <h2 class="section-title">Neler Yapıyoruz?</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-car"></i>
+                <h3>Otopark Çizgileri</h3>
+                <p>Bozüyük'teki AVM, site ve kapalı otoparklar için standartlara uygun kolon boyama ve araç yer belirleme çizgileri çiziyoruz.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-industry"></i>
+                <h3>İş Güvenliği Çizgileri</h3>
+                <p>Bilecik Organize Sanayi bölgelerindeki fabrikalar için forklift yolları ve yaya geçiş alanları tasarlıyoruz.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-paint-roller"></i>
+                <h3>Epoksi Zemin</h3>
+                <p>Tozumasız, estetik ve dayanıklı endüstriyel zemin kaplamaları ile alanlarınızı yeniliyoruz.</p>
+            </div>
         </div>
     </section>
 
-    <div class="brand-bar">
-        <i class="fab fa-aws fa-3x"></i>
-        <i class="fab fa-google fa-3x"></i>
-        <i class="fab fa-microsoft fa-3x"></i>
-        <i class="fab fa-apple fa-3x"></i>
-        <span>REFERANSLARIMIZ</span>
-    </div>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Kurumsal</h4>
-                <p>Ankara'da 15 yıllık tecrübe ile zemin işaretleme ve trafik güvenlik sistemlerinde lider çözüm ortağınız.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Hizmetler</h4>
-                <ul style="list-style: none;">
-                    <li>Epoksi Boya Uygulamaları</li>
-                    <li>Yaya Geçidi Çizgileri</li>
-                    <li>Ofset Tarama</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>İletişim Bilgileri</h4>
-                <p><i class="fas fa-map-marker-alt"></i> İvedik OSB, Yenimahalle/Ankara</p>
-                <p><i class="fas fa-envelope"></i> info@ankarayolcizgi.com</p>
-            </div>
+    <section id="uygulama" style="background: #222426;">
+        <h2 class="section-title">Uygulama Alanları</h2>
+        <div class="content-box">
+            <p><strong>Bozüyük Yol Çizgi</strong> olarak hizmet verdiğimiz başlıca alanlar:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Belediye ve Karayolları Şehir İçi Yollar</li>
+                <li>Hastaneler ve Okul Bahçeleri</li>
+                <li>Lojistik Depo ve Antrepolar</li>
+                <li>Spor Sahaları (Basketbol, Tenis vb.)</li>
+            </ul>
         </div>
-        <p style="text-align: center; font-size: 0.8rem; color: #555;">&copy; 2026 Ankara Yol Çizgi. Tüm Hakları Saklıdır.</p>
+    </section>
+
+    <section id="hakkimizda">
+        <h2 class="section-title">Biz Kimiz?</h2>
+        <div class="content-box" style="text-align: center;">
+            <p>Bilecik ve Bozüyük bölgesinde trafik güvenliğini en üst düzeye çıkarmak amacıyla kurulan firmamız, modern makine parkuru ve uzman kadrosuyla yol çizgi sektöründe liderliği hedeflemektedir. Kullandığımız boyalar TSE standartlarında olup, iklim koşullarına yüksek dayanıklılık gösterir.</p>
+        </div>
+    </section>
+
+    <footer id="iletisim">
+        <h2 style="color: var(--primary); margin-bottom: 20px;">İletişim</h2>
+        <p>Yeni Mahalle, Bozüyük / Bilecik</p>
+        <p>E-posta: info@bozuyukyolcizgi.com</p>
+        <br>
+        <p style="font-size: 0.8rem; color: #666;">&copy; 2026 Bozüyük Yol Çizgi Sistemleri. Tüm Hakları Saklıdır.</p>
     </footer>
 
 </body>
