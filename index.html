@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankara Yol Çizgi | Profesyonel Yol ve Otopark Çizgi Sistemleri</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Genel Stiller */
+        :root {
+            --ana-renk: #f1c40f; /* Sarı - Yol Çizgisi Rengi */
+            --koyu-renk: #2c3e50;
+            --acik-gri: #f4f4f4;
+            --beyaz: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigasyon */
+        nav {
+            background: var(--koyu-renk);
+            color: var(--beyaz);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--ana-renk);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: var(--beyaz);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--ana-renk);
+        }
+
+        /* Hero Bölümü */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1545147418-4f1e63968d9b?auto=format&fit=crop&q=80&w=1600') center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--beyaz);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-teklif {
+            background: var(--ana-renk);
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Hizmetler Bölümü */
+        .services {
+            padding: 50px 5%;
+            text-align: center;
+            background: var(--beyaz);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background: var(--acik-gri);
+            padding: 30px;
+            border-radius: 8px;
+            transition: 0.3s;
+            border-bottom: 4px solid var(--ana-renk);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--koyu-renk);
+            margin-bottom: 15px;
+        }
+
+        /* İletişim Bandı */
+        .cta-bar {
+            background: var(--ana-renk);
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--koyu-renk);
+            color: var(--beyaz);
+            padding: 40px 5% 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        /* Mobil Uyum */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ANKARA YOL ÇİZGİ</div>
+        <ul class="nav-links">
+            <li><a href="#anasayfa">Anasayfa</a></li>
+            <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="anasayfa">
+        <h1>Güvenli Yollar, Belirgin Çizgiler</h1>
+        <p>Ankara ve çevre illerde profesyonel yol çizgi, otopark boyama ve iş güvenliği işaretleme hizmetleri.</p>
+        <a href="tel:05000000000" class="btn-teklif">Hemen Teklif Al</a>
+    </section>
+
+    <div class="cta-bar">
+        7/24 Hizmet ve Ücretsiz Keşif İçin Bizi Arayın: 0 (5XX) XXX XX XX
+    </div>
+
+    <section class="services" id="hizmetler">
+        <h2>Hizmetlerimiz</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-road"></i>
+                <h3>Yol Çizgi Uygulamaları</h3>
+                <p>Şehir içi ve şehirler arası yollarda trafik güvenliğini artıran termoplastik ve soğuk yol çizgi boyaları.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-parking"></i>
+                <h3>Otopark Çizgileri</h3>
+                <p>AVM, site ve iş merkezi otoparkları için kolon boyama, numara yazımı ve yönlendirme çizgileri.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-industry"></i>
+                <h3>Fabrika İçi Çizgiler</h3>
+                <p>İş sağlığı ve güvenliği (İSG) standartlarına uygun yürüme yolları ve forklift yolu işaretlemeleri.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-walking"></i>
+                <h3>Yaya Geçitleri</h3>
+                <p>Okul önleri ve kavşaklarda yüksek görünürlüklü çift kompenantlı yaya geçidi uygulamaları.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="iletisim">
+        <div class="footer-content">
+            <div>
+                <h3>Ankara Yol Çizgi</h3>
+                <p>Yol ve zemin işaretleme sektöründe yılların verdiği tecrübe ile en kaliteli malzemeleri kullanarak hizmet veriyoruz.</p>
+            </div>
+            <div>
+                <h3>İletişim Bilgileri</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Ostim OSB, Yenimahalle / Ankara</p>
+                <p><i class="fas fa-phone"></i> 05xx xxx xx xx</p>
+                <p><i class="fas fa-envelope"></i> info@ankarayolcizgi.com</p>
+            </div>
+            <div>
+                <h3>Hızlı Menü</h3>
+                <p>Referanslarımız</p>
+                <p>Uygulama Alanları</p>
+                <p>Katalog</p>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; 2024 Ankara Yol Çizgi Sistemleri - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
