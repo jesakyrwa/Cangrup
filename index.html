@@ -55,21 +55,46 @@
             font-weight: 800; width: 80%; margin: -40px auto 40px; position: relative; z-index: 10;
         }
 
+        /* Referanslar Bölümü (Yeni) */
+        .referanslar {
+            background: var(--white);
+            padding: 40px 8%;
+            text-align: center;
+        }
+
+        .referanslar h2 { color: #222; margin-bottom: 30px; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .brand-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .brand-item {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: 0.4s;
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .brand-item:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
         /* Content Sections */
         section { padding: 80px 8%; }
         .section-title { text-align: center; margin-bottom: 40px; font-size: 2.2rem; color: var(--primary); }
         
-        .content-box {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 10px;
-            line-height: 1.8;
-            margin-bottom: 40px;
-        }
-
-        /* Grid System */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #222426; padding: 30px; border-left: 5px solid var(--primary); }
+        .card { background: #222426; padding: 30px; border-left: 5px solid var(--primary); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
         .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
 
         footer { background: #111; padding: 40px 8%; text-align: center; border-top: 1px solid #333; }
@@ -82,7 +107,7 @@
         <nav>
             <ul>
                 <li><a href="#hizmetler">Hizmetler</a></li>
-                <li><a href="#uygulama">Uygulama Alanları</a></li>
+                <li><a href="#referanslar">Referanslar</a></li>
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
@@ -92,58 +117,58 @@
 
     <section class="hero">
         <h1>BİLECİK'İN GÜVENLİ YOLLARI</h1>
-        <p>Bozüyük merkezli, profesyonel zemin ve yol işaretleme çözümleri.</p>
+        <p>Bozüyük OSB ve çevresinde profesyonel zemin işaretleme çözümleri.</p>
     </section>
 
     <div class="info-bar">
         BOZÜYÜK & BİLECİK GENELİ ÜCRETSİZ KEŞİF: 0 (5XX) XXX XX XX
     </div>
 
+    <div class="referanslar" id="referanslar">
+        <h2>Güçlü Referanslarımız</h2>
+        <div class="brand-grid">
+            <div class="brand-item">VITRA</div>
+            <div class="brand-item">ECZACIBAŞI</div>
+            <div class="brand-item">DEMİRDÖKÜM</div>
+            <div class="brand-item">VİSAM</div>
+            <div class="brand-item">BOZÜYÜK OSB</div>
+            <div class="brand-item">PARK CAM</div>
+        </div>
+    </div>
+
     <section id="hizmetler">
-        <h2 class="section-title">Neler Yapıyoruz?</h2>
+        <h2 class="section-title">Uzmanlık Alanlarımız</h2>
         <div class="grid">
             <div class="card">
-                <i class="fas fa-car"></i>
-                <h3>Otopark Çizgileri</h3>
-                <p>Bozüyük'teki AVM, site ve kapalı otoparklar için standartlara uygun kolon boyama ve araç yer belirleme çizgileri çiziyoruz.</p>
-            </div>
-            <div class="card">
                 <i class="fas fa-industry"></i>
-                <h3>İş Güvenliği Çizgileri</h3>
-                <p>Bilecik Organize Sanayi bölgelerindeki fabrikalar için forklift yolları ve yaya geçiş alanları tasarlıyoruz.</p>
+                <h3>Fabrika İçi Çizgiler</h3>
+                <p>Bozüyük Organize Sanayi Bölgesi'ndeki tesisler için İSG uyumlu forklift ve yaya yolu işaretlemeleri.</p>
             </div>
             <div class="card">
-                <i class="fas fa-paint-roller"></i>
-                <h3>Epoksi Zemin</h3>
-                <p>Tozumasız, estetik ve dayanıklı endüstriyel zemin kaplamaları ile alanlarınızı yeniliyoruz.</p>
+                <i class="fas fa-parking"></i>
+                <h3>Otopark Sistemleri</h3>
+                <p>Site, hastane ve kamu binaları için yüksek dayanımlı soğuk ve termoplastik yol çizgi boyası uygulamaları.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>İş Güvenliği</h3>
+                <p>Fabrika içi tehlike alanları, acil çıkış yönlendirmeleri ve hız kesici montaj hizmetleri.</p>
             </div>
         </div>
     </section>
 
-    <section id="uygulama" style="background: #222426;">
-        <h2 class="section-title">Uygulama Alanları</h2>
-        <div class="content-box">
-            <p><strong>Bozüyük Yol Çizgi</strong> olarak hizmet verdiğimiz başlıca alanlar:</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li>Belediye ve Karayolları Şehir İçi Yollar</li>
-                <li>Hastaneler ve Okul Bahçeleri</li>
-                <li>Lojistik Depo ve Antrepolar</li>
-                <li>Spor Sahaları (Basketbol, Tenis vb.)</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="hakkimizda">
-        <h2 class="section-title">Biz Kimiz?</h2>
-        <div class="content-box" style="text-align: center;">
-            <p>Bilecik ve Bozüyük bölgesinde trafik güvenliğini en üst düzeye çıkarmak amacıyla kurulan firmamız, modern makine parkuru ve uzman kadrosuyla yol çizgi sektöründe liderliği hedeflemektedir. Kullandığımız boyalar TSE standartlarında olup, iklim koşullarına yüksek dayanıklılık gösterir.</p>
+    <section id="hakkimizda" style="background: #222426;">
+        <h2 class="section-title">Bozüyük Yol Çizgi</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; line-height: 1.8;">
+            <p>Bilecik ve çevre illerde 10 yılı aşkın süredir endüstriyel zemin boyama ve yol çizgi hizmeti veriyoruz. Bölgenin sanayi yükünü taşıyan Bozüyük OSB'deki birçok dev tesise hizmet vermenin gururunu yaşıyoruz. Modern araç filomuz ve sertifikalı boya çeşitlerimizle uzun ömürlü çözümler sunuyoruz.</p>
         </div>
     </section>
 
     <footer id="iletisim">
         <h2 style="color: var(--primary); margin-bottom: 20px;">İletişim</h2>
-        <p>Yeni Mahalle, Bozüyük / Bilecik</p>
-        <p>E-posta: info@bozuyukyolcizgi.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Yeni Mahalle, Sanayi Cad. No:11 Bozüyük / Bilecik</p>
+        <p><i class="fas fa-phone"></i> 05xx xxx xx xx</p>
+        <p><i class="fas fa-envelope"></i> info@bozuyukyolcizgi.com</p>
         <br>
         <p style="font-size: 0.8rem; color: #666;">&copy; 2026 Bozüyük Yol Çizgi Sistemleri. Tüm Hakları Saklıdır.</p>
     </footer>
